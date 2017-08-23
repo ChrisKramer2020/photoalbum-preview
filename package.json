@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "deploy": "yarn build && surge ./public --domain photoalbum-preview.chris.surge.sh",
+    "start": "webpack-dev-server",
+    "prebuild": "rm -f public/index.html public/app-*.js public/vendor-*.js public/screen-*.css",
+    "build": "NODE_ENV=production webpack --progress"
+  },
+  "dependencies": {
+    "whatwg-fetch": "^2.0.3"
+  }
+}
